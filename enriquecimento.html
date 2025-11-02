@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="enriquecimento.css">
+    <title>Enriquecimento de Dados - SENAI</title>
+</head>
+<body>
+    <div class="container">
+        <form class="formulario" id="enriquecimentoForm">
+            <h2>Formulário de Enriquecimento de Dados</h2>
+            
+            <!-- 1 - Dados Pessoais -->
+            <div class="form-section">
+                <h2>Dados Pessoais</h2>
+                
+                <div class="form-group">
+                    <label for="nome" class="required">Nome completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nascimento" class="required">Data de Nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cpf" class="required">CPF</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rg" class="required">RG</label>
+                    <input type="text" id="rg" name="rg" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="genero" class="required">Gênero</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="genero_masculino" name="genero" value="masculino" required>
+                            <label for="genero_masculino">Masculino</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="genero_feminino" name="genero" value="feminino">
+                            <label for="genero_feminino">Feminino</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="genero_outro" name="genero" value="outro">
+                            <label for="genero_outro">Outro</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="estado_civil" class="required">Estado Civil</label>
+                    <select id="estado_civil" name="estado_civil" required>
+                        <option value="">Selecione</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo">Viúvo(a)</option>
+                        <option value="uniao_estavel">União Estável</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nacionalidade" class="required">Nacionalidade</label>
+                    <input type="text" id="nacionalidade" name="nacionalidade" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="naturalidade" class="required">Naturalidade</label>
+                    <input type="text" id="naturalidade" name="naturalidade" required>
+                </div>
+            </div>
+            
+            <!-- 2 - Endereço Completo -->
+            <div class="form-section">
+                <h2>Endereço Completo</h2>
+                
+                <div class="form-group">
+                    <label for="logradouro" class="required">Logradouro</label>
+                    <input type="text" id="logradouro" name="logradouro" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="numero" class="required">Número</label>
+                        <input type="text" id="numero" name="numero" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" id="complemento" name="complemento">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="bairro" class="required">Bairro</label>
+                        <input type="text" id="bairro" name="bairro" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="cidade" class="required">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="uf" class="required">UF</label>
+                        <select id="uf" name="uf" required>
+                            <option value="">Selecione</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                    <div class="form-group half">
+                        <label for="cep" class="required">CEP</label>
+                        <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3 - Contato -->
+            <div class="form-section">
+                <h2>Contato</h2>
+                
+                <div class="form-group">
+                    <label for="telefone" class="required">Telefone Celular</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="whatsapp">Whatsapp</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="whatsapp_sim" name="whatsapp" value="sim">
+                            <label for="whatsapp_sim">Sim</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="whatsapp_nao" name="whatsapp" value="nao" checked>
+                            <label for="whatsapp_nao">Não</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="required">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="text" id="linkedin" name="linkedin" placeholder="URL do perfil">
+                </div>
+            </div>
+            
+            <!-- 4 - Outras Informações -->
+            <div class="form-section">
+                <h2>Outras Informações</h2>
+                
+                <div class="form-group">
+                    <label for="cnh">Possui CNH?</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="cnh_sim" name="cnh" value="sim">
+                            <label for="cnh_sim">Sim</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="cnh_nao" name="cnh" value="nao" checked>
+                            <label for="cnh_nao">Não</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="categoria-cnh" style="display: none;">
+                    <label for="categoria">Categoria</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="categoria_a" name="categoria" value="A">
+                            <label for="categoria_a">A</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="categoria_b" name="categoria" value="B">
+                            <label for="categoria_b">B</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="categoria_c" name="categoria" value="C">
+                            <label for="categoria_c">C</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="categoria_d" name="categoria" value="D">
+                            <label for="categoria_d">D</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="categoria_e" name="categoria" value="E">
+                            <label for="categoria_e">E</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tipo_sanguineo">Tipo Sanguíneo</label>
+                    <select id="tipo_sanguineo" name="tipo_sanguineo">
+                        <option value="">Selecione</option>
+                        <option value="a_plus">A+</option>
+                        <option value="a_minus">A-</option>
+                        <option value="b_plus">B+</option>
+                        <option value="b_minus">B-</option>
+                        <option value="ab_plus">AB+</option>
+                        <option value="ab_minus">AB-</option>
+                        <option value="o_plus">O+</option>
+                        <option value="o_minus">O-</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cpd">PCD</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="cpd_sim" name="cpd" value="sim">
+                            <label for="cpd_sim">Sim</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="cpd_nao" name="cpd" value="nao" checked>
+                            <label for="cpd_nao">Não</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="observacao">Observação</label>
+                    <textarea id="observacao" name="observacao" rows="4" placeholder="Escreva suas observações aqui..."></textarea>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="button-group">
+                <button type="submit" class="btn-gravar">Gravar</button>
+                <button type="button" class="btn-cancelar" id="btnCancelar">Cancelar</button>
+                <button type="button" class="btn-voltar" id="btnVoltar">Voltar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="enriquecimento.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Inscrição SENAI</title>
+</head>
+<body>
+    <div class="container">
+        <form class="formulario" id="formInscricao">
+            <h2>Inscrição SENAI</h2>
+
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome"
+             pattern="[A-Za-zÀ-ÿ\s]+"
+             title="Use apenas letras e espaços" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" 
+             pattern="[0-9]{10,11}"
+             title="Digite apenas números (10 a 11 dígitos)"required>
+
+      <label for="curso">Curso desejado:</label>
+      <select id="curso" name="curso" required>
+        <option value="">Selecione...</option>
+        <option value="informatica">Técnico em Informática</option>
+        <option value="eletronica">Técnico em Eletrônica</option>
+        <option value="mecanica">Técnico em Mecânica</option>
+      </select>
+      <br><br>
+      <button type="submit">Enviar Inscrição</button>
+       <!-- Link sou aluno -->
+       <a href="enriquecimento.html" class="link-aluno">Já sou aluno</a>
+    </form>
+    <!-- Criando a mensagem de confirmação -->
+     <div class="confirm" id="mensagemdeConfirmacao" style="display: none;">
+        <h2> Inscrição realizada com sucesso!</h2>
+        <button id="voltarBtn">Voltar para inscrição</button>
+     </div>
+  </div>
+  <!--Script para interação com o formulario-->
+  <script src="script.js"></script>
+</body>
+</html>
