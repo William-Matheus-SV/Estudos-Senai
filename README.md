@@ -1,6 +1,7 @@
 # Atividade-31-10-2025
 Sistema de inscrição Senai e Enriquecimentoo de dados para alunos
 # Sistema de Inscrição SENAI
+# https://william-matheus-sv.github.io/Atividade-31-10-2025/
 
 Sistema web para inscrição e enriquecimento de dados de alunos do SENAI.
 
