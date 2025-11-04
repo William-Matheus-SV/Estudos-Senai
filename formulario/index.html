@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "device-width, initial-scale = 1.0">
+       <title>
+            <h1>Aula 23-10-2025</h1>
+       </title> 
+    </head>
+    <body>
+        <h2> Formulário HTML </h2>
+        <!-- Action # é para definir para onde os dados irão, neste caso o # é para lugar nenhum usado apenas para este exercicio -->
+        <form action="#" method="post">
+        <!-- Campo de Nome -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" 
+        required maxlength="30" pattern="[A-Za-zÀ-Úà-ú\s]+" 
+        title="Use apenas letras e espaços, sem números ou símbolos.">
+        <br><br>
+
+        <!-- Campo de Cidade -->
+        <label for ="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" 
+        required maxlength="60" pattern="[A-Za-zÀ-Úà-ú\s]+" 
+        title="Use apenas letras e espaços, sem números ou símbolos.">
+        <br><br>
+
+        <!-- Campo de Telefone -->
+         <label for="telefone">Telefone:</label>
+         <input type="tel" id="telefone" name="telefone" placeholder="(00)00000-0000">
+         <br><br>
+
+        <!-- Campo de Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+        <!-- Campo com o botão checkbox do tipo radio -->
+          <p>Gênero</p>
+          <!--Masculino-->
+          <input type="radio" id="masculino" name="genero" value="Masculino">
+          <label for="masculino">Masculino</label>
+          <!--Feminino-->
+          <input type="radio" id="feminino" name="genero" valuer="Feminino">
+          <label for="feminino">Feminino</label>
+          <br><br>
+        <!-- Campo dos Interesses com checklist -->
+            <p>Escolha seus interesses:</p>
+            <input type="checkbox" id="entreterimento" name="interesses" value="Entreterimento">
+            <label for="entreterimento">Entreterimento</label><br>
+
+            <input type="checkbox" id="saude" name="interesses" value="Saude">
+            <label for="saude">Saúde</label><br>
+
+            <input type="checkbox" id="tecnologia" name="interesses" value="Tecnologia">
+            <label for="tecnologia">Tecnologia</label><br>
+
+            <input type="checkbox" id="viagem" name="interesses" value="Viagem">
+            <label for="viagem">Viagem</label><br><br>
+
+        <!-- Botões -->
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+        </form>
+    </body>    
+
+</html>
+
