@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg,#0000ff 0%, #0000ff 33.33%, white 33.33%,white 66.66%, #FF8C00 66.66%, #FF8C00 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.formulario {
+    width: 100%; 
+    max-width: 700px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 40px 40px 30px 40px;
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 25px;
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.form-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section:first-of-type {
+    margin-top: 10px;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 15px;
+}
+
+.form-section h2 {
+    color: #0000ff;
+    font-size: 20px;
+    margin-bottom: 18px;
+    text-align: left;
+    padding-top: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+/* Novas classes para linhas com dois campos */
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.form-group.half {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.form-group.half label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-group.half input,
+.form-group.half select {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0000ff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-option, .checkbox-option {
+    display: flex;
+    align-items: center;
+}
+
+.radio-option input, .checkbox-option input {
+    margin-right: 6px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 10px;
+}
+
+.btn-gravar, .btn-cancelar, .btn-voltar {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-gravar {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-gravar:hover {
+    background-color: #218838;
+}
+
+.btn-cancelar {
+    background-color: #e30613;
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background-color: #c82333;
+}
+
+.btn-voltar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-voltar:hover {
+    background-color: #5a6268;
+}
+
+.required::after {
+    content: " *";
+    color: #e30613;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+        align-items: flex-start;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+    
+    .formulario {
+        padding: 25px 20px;
+        margin: 10px 0;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}
