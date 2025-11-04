@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição SENAI</title>
+    <style>
+        * {
+            margin: 0; /*Remove margens e preenchimentos padrão de todos os elementos*/
+            padding: 0; /*Remove margens e preenchimentos padrão de todos os elementos*/
+            box-sizing: border-box; /*Faz com que padding e border sejam incluídos na largura/altura dos elementos*/
+            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Define a fonte padrão para toda a página*/
+        }
+        body { /*Fundo da pagina com três cores*/
+            height: 100vh;
+            background: linear-gradient(45deg,#0000ff 0%, #0000ff 33.33%, white 33.33%,white 66.66%, #FF8C00 66.66%, #FF8C00 100%); /*Cria um gradiente linear na horizontal* to bottom se quiser na vertical*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        form {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            padding: 40px;
+            position: relative;
+            /*max-width: px: Limita a largura máxima do formulário
+            border-radius: Cantos arredondados
+            box-shadow: Sombra suave ao redor do formulário
+            overflow: hidden: Garante que cantos arredondados funcionem corretamente*/
+        }
+        h2 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 30px;
+            font-size: 28px;
+            }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s; /*Cria animação suave ao focar nos campos*/
+        }
+
+        input:focus, select:focus, textarea:focus { /* : focus:  - Estilo aplicado quando o campo está selecionado*/
+            border-color: #0000ff;
+            outline: none;
+            box-shadow: 0 0 0 2px #0000ff; /*Cria um "halo" ao redor do campo focado*/
+        }
+         textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 30px 0;
+        }
+        .btn-submit {
+            background-color: #e30613;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover { /*:hover: - Efeito quando o mouse passa sobre o botão (cor mais escura)*/
+            background-color: #441ac3;
+        }
+         @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="formulario">
+            <h2>Inscrição SENAI</h2>
+
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <label for="curso">Curso desejado:</label>
+      <select id="curso" name="curso" required>
+        <option value="">Selecione...</option>
+        <option value="informatica">Técnico em Informática</option>
+        <option value="eletronica">Técnico em Eletrônica</option>
+        <option value="mecanica">Técnico em Mecânica</option>
+      </select>
+      <br><br>
+      <button type="submit">Enviar Inscrição</button>
+    </form>
+  </div>
+</body>
+</html>
