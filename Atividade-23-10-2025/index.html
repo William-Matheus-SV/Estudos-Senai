@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=decive-width, initial-scale =1.0">
+        <title> Atividade 23/10/2025 </title>
+		<style>
+			 h1 {
+			background-color: lightblue;
+			display: inline-block;
+			padding: 5px 10px;
+			}
+			button[type="submit"]{
+				background-color: green;
+				color: white;
+			}
+			button[type="reset"]{
+				background-color: red;
+				color: white;
+			}	
+		</style>
+    </head>
+    <body>
+        <h1>Cadastro de Cliente</h1>
+        <p>Preencha os campos abaixo para registrar seu interesse nos serviços da nossa empresa.</p>
+		<hr>
+        <h2>Informações Pessoais</h2>
+        <form action="#" method="post">
+            <!--Campo do Nome-->
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" name="nome"
+			required maxlength="60" pattern="[A-Z a-z À-Ú à-ù\s]+"
+			placeholder="Nome Completo"
+			<title="Use apenas letras e espaços, sem números ou símbolos.">
+			<!--Campo do Email-->
+			<label for="email">E-mail:</label>
+			<input type="email" id="email"
+			required maxlength="90"
+			placeholder="exemplo@email.com"
+			<title="Digite um e-mail válido.">
+			<!--Campo da Senha-->
+			<label for="senha">Crie uma Senha:</label>
+			<input type="password" id="senha"
+			pattern="[A-Z a-z 0-9]+" minlength="8"
+			<title="A senha deve ter no mínimo 8 caracteres e conter apenas letras (A-Z) e números(1-9)."
+			required>
+			<!--Campo de Data-->
+			<label for="nascimento">Data de Nascimento:</label>
+			<input type="date" id="nascimento">
+			<hr>
+			<h2>Contato e Localização</h2>
+			<!--Campo do Telefone-->
+			<label for="telefone">Telefone:</label>
+			<input type="tel" id="telefone"
+			placeholder="(00) 00000-0000"
+			pattern="[0-9]{11}" required>
+			<!--Campo de Cidade-->
+			<label for="cidade">Cidade:</label>
+			<input type="text" id="cidade">
+			<!--Campo do Estado-->
+			<label for="estado">Estado:</label>
+                <label for="estado">Estado:</label>
+                <select id="estado">
+                    <option value="">Selecione...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+			<hr>
+			<h2>Preferências de Serviço</h2>
+			<label>Deseja receber novidades por e-mail?</label><br>
+			<!--Botões checkboxes-->
+			<label><input type="radio" name="novidades" value="sim"> Sim</label>
+            <label><input type="radio" name="novidades" value="nao"> Não</label>
+			<h2> Selecione os serviços de interesse:</h2><br>
+			<!--Botões checklist-->
+			<label><input type="checkbox" name="servicos" value="web"> Desenvolvimento Web</label>
+            <label><input type="checkbox" name="servicos" value="design"> Design Digital</label>
+            <label><input type="checkbox" name="servicos" value="redes"> Redes de Computadores</label>
+			<hr>
+			<h2>Comentários</h2>
+			<p>Deixe uma mensagem(opcional):</p>
+			<textarea rows="5" cols="40"> </textarea><br>
+			<!--Botões de Enviar e Limpar-->
+			 <button type="submit">Enviar Cadastro</button>
+			 <button type="reset">Limpar</button>
+        </form>
+    </body>
+</html>
